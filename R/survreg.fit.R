@@ -149,7 +149,7 @@ survreg.fit<- function(x, y, weights, offset, init, controlvals, dist,
 	coef[1] <- sum(weights*deriv$dg + wt*(yy -offset)) / sum(wt)
         
 	# Now the fit proper (intercept only)
-	fit0 <- .Call(Csurvreg6,
+	fit0 <- .Call(survreg6,
 		       iter = as.integer(20),
 		       nvar = as.integer(1),
 		       as.double(y),
@@ -197,7 +197,7 @@ survreg.fit<- function(x, y, weights, offset, init, controlvals, dist,
 	}
 
     # Now for the fit in earnest
-    fit <- .Call(Csurvreg6,
+    fit <- .Call(survreg6,
 		   iter = as.integer(iter.max),
 		   as.integer(nvar),
 		   as.double(y),
