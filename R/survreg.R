@@ -1,6 +1,6 @@
 survreg <- function(formula, data, weights, subset, na.action,
 	dist='weibull', init=NULL,  scale=0, control, parms=NULL, 
-	model=FALSE, x=FALSE, y=TRUE, robust=FALSE, cluster, score=FALSE,  ...) {
+	model=FALSE, x=FALSE, y=TRUE, robust=FALSE, cluster, score=FALSE, lambda, alpha,  ...) {
 
     Call <- match.call()    # save a copy of the call
 
